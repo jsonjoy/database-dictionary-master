@@ -4,7 +4,6 @@ import com.trh.dictionary.bean.ColumnInfo;
 import com.trh.dictionary.bean.IndexInfo;
 import com.trh.dictionary.bean.TableInfo;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.input.NullInputStream;
 
 import java.io.InputStream;
 import java.sql.*;
@@ -45,7 +44,7 @@ public class OracleDatabase {
                 //2023年8月2日 13:45:53   修改乱码
                 String COMMENTS = "";
                 InputStream comments = rs.getAsciiStream("COMMENTS");
-                if(comments != null){
+                if (comments != null) {
                     COMMENTS = IOUtils.toString(rs.getAsciiStream("COMMENTS"), "GBK");
                 }
 
@@ -99,7 +98,7 @@ public class OracleDatabase {
 
                     String description = "";
                     InputStream asciiStream = columnRs.getAsciiStream(6);
-                    if(asciiStream != null){
+                    if (asciiStream != null) {
                         description = IOUtils.toString(columnRs.getAsciiStream(6), "GBK");
                     }
 
