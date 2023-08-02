@@ -1,0 +1,1 @@
+{"selector":"oracle","ip":"10.0.0.210","port":"1521","password":"wssq123","username":"qzsf_wssq","database":"aschlyy","md5Str":"c2ee9980d3117141999df14c63f3a5fa"}
