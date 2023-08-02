@@ -236,7 +236,8 @@ public class DatabaseController {
                 ObjectMapper mapper = new ObjectMapper();
                 String jsonString = mapper.writeValueAsString(historyConnet);
                 //这里记录连接成功的记录
-                File fileToWrite1 = FileUtils.getFile("history/history.txt");
+                //修改保存地址，写死地址
+                File fileToWrite1 = FileUtils.getFile("F:/Tools/history/history.txt");
                 if(!fileToWrite1.getParentFile().exists()){
                     try {
 //                        logger.info("writing lines to a file.");
@@ -270,7 +271,7 @@ public class DatabaseController {
 
             //这里记录连接成功的记录
             logger.info("writing lines to a file.");
-            File fileToWrite1 = FileUtils.getFile("history/history.txt");
+            File fileToWrite1 = FileUtils.getFile("F:/Tools/history/history.txt");
             if(!fileToWrite1.exists()){
                 return null;
             }
